@@ -266,3 +266,58 @@ If we try to define a chamfer that would result in nothing of the chamfered face
   <img src="image-30.png" alt="Trying a chamfer that consumes all of the affected faces will result on 'no operation' (no feature added)">
   <figcaption><em>Figure 31. Trying a chamfer that consumes all of the affected faces will result on 'no operation' (no feature added)</em></figcaption>
 </figure>
+
+## The model tree is more-or-less (?) an operation 'history'?
+
+The presenter in the video shows how, when we delete 'features' (operations to mutate a body), then the previous feature remains. AT least, that is how I interpret what he is explaining.
+
+<figure>
+  <img src="image-31.png" alt="Model tree with Chamfer 'feature' the last one">
+  <figcaption><em>Figure 32. Model tree with Chamfer 'feature' the last one</em></figcaption>
+</figure>
+
+Note that the last 'feature' (body mutating operation) is marked with a little green arrow.
+
+I I delete the Chamfer body mutating operation (feature) we are left with the *previous* feature (the pad). And this now have the green arrow. 
+
+<figure>
+  <img src="image-32.png" alt="Model tree with Chamfer 'feature' deleted">
+  <figcaption><em>Figure 33. Model tree with Chamfer 'feature' deleted</em></figcaption>
+</figure>
+
+Note that the 'Pad004' has the defining sketch inside.
+
+<figure>
+  <img src="image-33.png" alt="The 'Pad004' feature has the defining sketch inside">
+  <figcaption><em>Figure 34. The 'Pad004' feature has the defining sketch inside</em></figcaption>
+</figure>
+
+But if we delete the 'Pad004' feature the sketch remains!
+
+<figure>
+  <img src="image-34.png" alt="The 'Sketch004' remains after deleting feature that used it!">
+  <figcaption><em>Figure 35. The 'Sketch004' remains after deleting feature that used it!</em></figcaption>
+</figure>
+
+Ok, I find this a bit confusing? I suppose the featuire in the tree does not show ownership or containment. Rather, the sketch being inside a feature means the feature uses the sketch as input?
+
+## Be observant that Freecad adds the appropriate constraint!
+
+When I draw the multiline triangle I happened to add the line to the **center point** instead as **on line** (coincident point).
+
+<figure>
+  <img src="image-35.png" alt="The correct 'point on object' constraint for tutorial diagonal line">
+  <figcaption><em>Figure 36. The correct 'point on object' constraint for tutorial diagonal line</em></figcaption>
+</figure>
+
+It seems Freecad recognises if I hover the cursor near the center of a line. If I click there while drawing a line it will be added (locked) to the center point of the line!
+
+Note how hard it is to actually see the 'centered' contraint...
+
+<figure>
+  <img src="image-36.png" alt="The hard-to-see erroneous 'coincident to center point' for tutorial diagonal line">
+  <figcaption><em>Figure 37. The hard-to-see erroneous 'coincident to center point' for tutorial diagonal line</em></figcaption>
+</figure>
+
+
+
