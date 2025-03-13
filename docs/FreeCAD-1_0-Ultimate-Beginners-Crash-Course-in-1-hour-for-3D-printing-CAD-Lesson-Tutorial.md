@@ -319,5 +319,5 @@ Note how hard it is to actually see the 'centered' contraint...
   <figcaption><em>Figure 37. The hard-to-see erroneous 'coincident to center point' for tutorial diagonal line</em></figcaption>
 </figure>
 
-
+x
 
