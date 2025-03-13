@@ -240,4 +240,29 @@ And I was finally able to 'pad' this sketch.
   <figcaption><em>Figure 28. The second 'pad'</em></figcaption>
 </figure>
 
+## Detached 'pad' (padding in the wrong direction) is invisible!
 
+The third sketch that is to extend the second pad must be padded 'reversed' to connect with the existing second pad! Otherwise it will not be regarded as 'connected' and also be invisible!
+
+I find this confusing? Surely a better user interfcae would have been to show an 'invalid' or unacceptable extension of a body as some pink ghost like pad with a message that alerts the user of the problem? Or better still, Freecad should figure out the valid direction and only allow that one? In this case we get the worst of all - a default padding direction that is invalid and that creates an invisible pad and no user feedback about the error...
+
+<figure>
+  <img src="image-28.png" alt="The third sketch">
+  <figcaption><em>Figure 29. The third sketch must be padded 'reversed' to connect with existing body (pad)</em></figcaption>
+</figure>
+
+## You can't 'chamfer' away a whole 'face'!
+
+The presenter shows how Freecad does not allow a chamfer to consume all of the chamfered faces away.
+
+<figure>
+  <img src="image-29.png" alt="A chamfer whith remaining face is ok">
+  <figcaption><em>Figure 30. A chamfer whith remaining face is ok</em></figcaption>
+</figure>
+
+If we try to define a chamfer that would result in nothing of the chamfered faces left - then the 'feature' (mutated shape) will flip back to unmodified (no effect)
+
+<figure>
+  <img src="image-30.png" alt="Trying a chamfer that consumes all of the affected faces will result on 'no operation' (no feature added)">
+  <figcaption><em>Figure 31. Trying a chamfer that consumes all of the affected faces will result on 'no operation' (no feature added)</em></figcaption>
+</figure>
