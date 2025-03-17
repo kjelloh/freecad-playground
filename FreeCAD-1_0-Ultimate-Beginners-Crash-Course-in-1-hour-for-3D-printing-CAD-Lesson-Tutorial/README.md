@@ -1,10 +1,10 @@
 # My notes from doing youtube tutorial "FreeCAD 1.0 Ultimate Beginners Crash Course in 1 hour for 3D printing CAD Lesson / Tutorial"
 
-See https://youtu.be/ZPsLhvgU8kc 
+See (https://youtu.be/ZPsLhvgU8kc)
 
 ## On macOS you 'Home' the 3D view with key 'Fn' + 'Arrow Key Left'
 
-There is now 'Window' key on a Macbook pro keyboard. So to 'Home' the 3D view Freecad uses 'Fn' + 'Arrow Key Left'.
+There is no 'Window' key on a Macbook pro keyboard. So to 'Home' the 3D view Freecad uses 'Fn' + 'Arrow Key Left'.
 
 ## A 'Body' is a *thing* that contains 'Parts'
 
@@ -28,7 +28,7 @@ I am still confused about what a 'Workbench' actually is? I am at least able to 
 
 ![The View Sketch tool button](image-3.png)
 
-AHA! When I click the 'Create sketch' tool button I *actually go* to a '
+AHA! When I click the 'Create sketch' tool button I *actually go* to a 'sketch' workbench?
 
 ![The Sketcher selected in the workbench drop-down list](image-4.png)
 
@@ -129,7 +129,7 @@ Instead I found this fix (https://forum.freecad.org/viewtopic.php?t=75982) expla
 
 ## What are 'Body' vs. 'Tool Shape' vs. 'Feature'?
 
-When I applied the 'Mirrored' opretaion to the body I could choose if I wanted to *transform* a 'Body' or a 'Tool shape'.
+When I applied the 'Mirrored' operation to the body I could choose if I wanted to *transform* a 'Body' or a 'Tool shape'.
 
 <figure>
   <img src="image-20.png" alt="The 'mirrored' tool bar button">
@@ -319,5 +319,4 @@ Note how hard it is to actually see the 'centered' contraint...
   <figcaption><em>Figure 37. The hard-to-see erroneous 'coincident to center point' for tutorial diagonal line</em></figcaption>
 </figure>
 
-x
 
