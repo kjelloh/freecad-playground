@@ -182,6 +182,134 @@ Also, once I got the frame width (fixed my neggative H1 property value) I found 
 
 ![alt text](image-29.png)
 
+## Beware window can be placed also in 'thin air'
 
+The presenter in the video shows that if we place the window so that it is not actually on the wall, then tthis is still ok according to Freecad.
 
+![alt text](image-30.png)
 
+In this case this happens because the window is placed with the origo located at the window lower left corner.
+
+Still, this is a bit clumsy user interface, is it not?
+
+**It feels like Freecad just offers to many degrees of freedom to the user?**
+
+Anyhow, it still works though...
+
+## The 'Door' and the 'Window' tool are the same tool!
+
+Even though I click the door tool, it is the window property pane that shows up. This seems to be by design (and the user interface has not yet been cleaned up)?
+
+![alt text](image-31.png)
+
+NOTE: The property window for the 'Door' is labeled 'Window options'...
+
+![alt text](image-32.png)
+
+NOTE: I had to enable the 'Snap midpoint' to be able to place the door as the presenter did att the wall midpoint. Thus, Freecad does not enable midpoint snapping by default in BIM workbench?
+
+![alt text](image-33.png)
+
+After creation the 'door' still is labeled, and even rendered, as a window (see label 'window004' in my model).
+
+![alt text](image-34.png)
+
+## The 'snap to midpoint' is NOT a constraint!
+
+Even though I created the garage door 'snapped' to the wall midpoint, it is NOT fixated there. I am still able to move it to its correct position (just as the presenter in the video shows).
+
+![alt text](image-35.png)
+
+AHA! No, I missed that I need to manually select the 'type' from the drop-down in the 'window options' pane to 'simple door'!
+
+## Beware the properties of Wondow and Door can NOT be changed after creation
+
+It seems I can't come back and change properties like 'Preset' to 'e.g., 'Simple door' after the fact?
+
+I had to delete my 'window' and redo the 'Door'. This time making sure I set 'Preset' to 'Simple door'!
+
+![alt text](image-36.png)
+
+Now at least the model tree shows 'Door' for my door.
+
+![alt text](image-37.png)
+
+## Beware moving in more than one axis!
+
+For some reason I failed to copy-move my second garage door in only the y-axis direction.
+
+![alt text](image-38.png)
+
+I could see that the left (copy of the right garage door) was more inset than the original. The problem was that the Position x value was not zero for the copy.
+
+![alt text](image-39.png)
+
+## Beware the door 'eating away' more than it needs when placed on a wall?
+
+In the same way as a window, a door 'eats away' much more than the wall thickness it is placed on.
+
+In this example a door at the corner removes quite a shunk from the adjacent wall too?!
+
+![alt text](image-40.png)
+
+## Beware the 'Draw style' icon looks like a 'no parking sign'?
+
+![alt text](image-41.png)
+
+## Beware the BIM workbench is NOT parametric (e.g., hard coded door inset woun't adapt to wall thickness changes...)
+
+The presenter shows how to inset the door so that it is flush with the inside of the wall. But I imagine this means that if I later mutate the wall thickness, the the dorr inset will retain its hard coded value?
+
+## Beware opaque door (and window) property names 'Opening' and 'Symbol Plan'
+
+![alt text](image-42.png)
+
+It seems that 'Opening' is how much the door should be shown open in the 3D view in degrees.
+
+Also, the 'SYmbol Plan' seems to be a flag that determines if the door opening will be shown with a symbol on any created floor plan?
+
+The second property is especially confusing as I would expect it should be the floor plan that decides how 'stuff' is modeled on the plan?
+
+Anyhow...
+
+## Beware a door (or window) 'Invert opening direction' propert is in the right-click-drop-down!
+
+![alt text](image-43.png)
+
+The 'Invert opening direction' seems to be a 'feature' (a mutating opoeration) on the door and NOT a propert? At least, to change how the door opens you have to right click the door and select 'Invert opening direction' in the drop-down!
+
+Note that the same goes for 'Invert hinghe position'.
+
+## Beware that a door is placed inside the wall it is placed on (and become hidden in the tree view)!
+
+I created the first indoor door and could not fin the door after it was placed. The reason was that it was not placed in the list of external wall doors and windows. Insetad it was placed inside the interior door. In hindsight this is of course as expected. But the user interface did not open the wall object to show the new door. So I was confused for a moment!
+
+![alt text](image-44.png)
+
+To see the new door I had to expand the wall object in which it was placed!
+
+![alt text](image-45.png)
+
+## Beware the video shows external and internal door opening different!
+
+In this video the external door is shown on the floor plan with the width of the opening in the wall! While the internal door is shown as the width of the door blade. This confused me!
+
+![alt text](image-46.png)
+
+This means that the external door AND the internal door is actually the **same width**. That is, as the frame width is 50 mm, a 900 wide door will need an opening of 900 mm and will have a door blade of 800 mm (as is the requirement shown on the floor plan).
+
+Surely I would value this as bad practice for my own house floor plans?
+
+Or, is this how openings are modeled in external vs internal walls for architecture floor plans?
+
+## Beware the differenmce between 'Axis' and 'Position' properties!
+
+When I tried to move the second door into place I changed the x-value of the placement 'Axis' property. This had no effect! I was to change the placement 'Position' value.
+
+![alt text](image-47.png)
+
+Ok, maybe kind of obvious in hindsight. Still, just seeing 'Axis' weas enough for me to not understand my mistake.
+
+Also, I imagine 'Axis' is the normal or the door. So why did me chaning it not cause any changes in the view?
+
+Anyhow...
