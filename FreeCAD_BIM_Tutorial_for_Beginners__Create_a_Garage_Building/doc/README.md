@@ -2,6 +2,8 @@
 
 See (https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm)
 
+NOTE: My model turned out with the wrong external wall size (see below). Pleas be beware of this if you are to open my model and inspect it.
+
 ## BIM workbench rectangle has a 'make face' property
 
 The presenter 'turns off' the face of the first drawn rectangle.
@@ -27,6 +29,9 @@ If I 'right align' my created wall it seems it is placed 'inside' the rectangle?
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
+
+NOTE: Later (See below) it turns out my wall was aligned 'left' for some reason. This is WRONG but at that stage I chose not to go back an fix everytging that is in the wrong place if I fix my external wall.
 
 ## The Line colour of the rectangle is shown ONLY when not selected!
 
@@ -313,3 +318,70 @@ Ok, maybe kind of obvious in hindsight. Still, just seeing 'Axis' weas enough fo
 Also, I imagine 'Axis' is the normal or the door. So why did me chaning it not cause any changes in the view?
 
 Anyhow...
+
+## Beware - Doors and Windows did NOT adapt to me fixing external wall alignment!
+
+When I was to paste in the toilet I discovered I have created the external walls incorrectly!
+
+They should have been created with alignemt right instead of left. But my notes (See above) indicates I really did align them left. So what has gone wrong I don't now?
+
+Anyhow, this meant my whole house was wrong! And If I went back to my external wall and fixedit - then the wall was corrected. BUT: Everything relating to the external wall remained in place. That is, all the external doors and windows now hanged in thin air. And all internal walls pertruded into the external wall. 
+
+![alt text](image-48.png)
+
+NOTE: I decided to not fix this for this tutorial...
+
+## The 'Stretch' tool works a bit strange (not how you expect)
+
+![alt text](image-49.png)
+
+I though the 'Stretch' tool would work like a 'feature' in that I could click the tool and then click the points to stretch. But this is NOT how this tool works.
+
+You have to:
+
+0. Click the object to stretch in the model tree
+1. Click the 'stretch' tool
+2. Move cursor and click to start a 'selection rectangle'
+3. Move the cursor and click to end the 'selection rectangle'
+4. The points inside the rectangle you drew will be 'stretched'.
+5. click the stretch start point (can be anywhere).
+6. Optionally click 'x','y' or 'z' to lock direction to an axis.
+7. move the cursor to start defining the stretch amount.
+8. Enter the amount to strecth and hit enter.
+
+NOTE: I find this tool a bit strange? It seems it works by 'grabbing' vertecies and then 'move' them while holding the rest of the vertices in place?
+
+## It seems the roof is actually parametric relative the rectangle used to create the roof?
+
+The presenter in the video shows how he had to 'fix' the rectangle used to define the roof to have the overhand on the non-sloping sides of the roof.
+
+And after having changed the rectangle (stretched) the roof was now larger (had the overhang we wanted).
+
+So, windows and doors are NOT parametrically attahced to a wall? But the roof IS parametrically attached to the used rectangle?
+
+How can we undestand what stuff in the BIM workbench are parametric and what is not?
+
+## The BIM workbench 'Remove component' tool works in a bit mysterious way?
+
+The 'Remove component' tool is a '-' symbol.
+
+![alt text](image-50.png)
+
+I am a bit unsure how to understand this tool? It seems it somehow performs 'A - B' where A is the first 'thing' selected and B is the second one. But what is the result? I mean, what is cut away?
+
+If I seleft the roof first (for A).
+
+![alt text](image-51.png)
+
+And then select the exterior wall (as B)
+
+![alt text](image-52.png)
+
+The result is, a bit surprisingly, that the exterior wall from the ground and up to the roof remains.
+
+![alt text](image-53.png)
+
+But how can I make sense of this? The result is not a disjunct set? It is af the roof (my A in A-B) is used to split the exterior wall. But then what defines that the tool throws away the top part of the cut walls? What am I missing here.
+
+NOTE: I tried asking chatGPT but what it said made no sense. Clearly chatGPT has no sense of logic or spatial relations...?
+ 
