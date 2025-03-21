@@ -4,6 +4,10 @@ See (https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm)
 
 NOTE: My model turned out with the wrong external wall size (see below). Pleas be beware of this if you are to open my model and inspect it.
 
+But I got through and had me a model of the Garage as the presenter showed in the video.
+
+![alt text](image-58.png)
+
 ## BIM workbench rectangle has a 'make face' property
 
 The presenter 'turns off' the face of the first drawn rectangle.
@@ -397,3 +401,32 @@ In the BIM workbench the 'Sketch' icon is a zig-zag-line with red dots.
 
  I suppose this difference comes from the workbenches not being synchronised for look and feel?
 
+## Beware that it seems Freecad understands 'model' as something 'real' in that we can adjust the property 'Appearance'
+
+I would think a 'model' is a representation of how something may exist in reality. So that when I build it I use the model for measurments and properties. But it seems Freecad insetad treat things in the model as 'real' in that we may change their 'Appearance'?
+
+If I right click the roof I can select its 'Appearance' from a drop-down list.
+
+![alt text](image-56.png)
+
+## Beware that right clicking the roof soes NOT select the roof!
+
+It seems if I right click the roof and select 'Appearance' I actually will edit the properties of what was *actually* selected in the model tree view!
+
+I have to first **click to select** then **right click to edit**!
+
+## It seems Freecad 'IFC Type' is in fact 'IFC Class'
+
+I interpret the presenter to describe that the Freecad property 'IFC type' is in fact the IFC standard 'Class'?
+
+![alt text](image-57.png)
+
+Also: Our garage doors in IFC should have 'Predefined Type' USERDEFINED and then speficifed in 'Object Type' (in this case as 'Sectional').
+
+## Consider the IFC Classes is a bit of a 'mess' and Freecad 1.0 supports IFC 4.0?
+
+The presenter showed how to assign appropriate IFC classes, Predefined Type and in some cases USERDEFINED type combined with Object Type named manually.
+
+My final house model now looked like this.
+
+![alt text](image-58.png)
