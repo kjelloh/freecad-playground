@@ -1,6 +1,6 @@
 # My comments following youtube video 'FreeCAD BIM Tutorial for Beginners | Create a Garage Building'
 
-See (https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm)
+See [https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm](https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm)
 
 NOTE: My model turned out with the wrong external wall size (see below). Pleas be beware of this if you are to open my model and inspect it.
 
