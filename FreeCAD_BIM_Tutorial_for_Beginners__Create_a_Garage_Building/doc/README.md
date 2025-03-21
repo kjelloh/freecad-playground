@@ -385,3 +385,15 @@ But how can I make sense of this? The result is not a disjunct set? It is af the
 
 NOTE: I tried asking chatGPT but what it said made no sense. Clearly chatGPT has no sense of logic or spatial relations...?
  
+ ## Beware the different icons to create a sketch in BIM vs PArt Design or Sketcher workbench!
+
+In the BIM workbench the 'Sketch' icon is a zig-zag-line with red dots.
+
+ ![alt text](image-54.png)
+
+ While in 'Part Design' workbench the 'Create Sketch' looks more like a sheet of paper with a red square and circle on it.
+
+ ![alt text](image-55.png)
+
+ I suppose this difference comes from the workbenches not being synchronised for look and feel?
+
