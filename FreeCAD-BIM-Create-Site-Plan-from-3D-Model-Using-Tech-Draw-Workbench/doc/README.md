@@ -152,7 +152,7 @@ Bit ok, the dialog seems to bde about deciding how to project the 3D 'things' I 
 
 ![alt text](image-13.png)
 
-## Beware that I need to set a cistom scale AND a POSITIVE Z-axis
+## Beware that I need to set a custom scale AND a positive Z-axis
 
 It seems that what I define in the dialog is how to orient the 3D 'things' I have selected so that I get the view I want looking DOWN on it. That is, If I click the down-arrow in the dialog until I have the center vector showing the orientation X=0, Y=0, Z=1, then I get a view of my house from 'above'?
 
@@ -165,3 +165,131 @@ NOTE: My house ended up larger than the house the presenter in the video created
 At this stage my page looked like this.
 
 ![alt text](image-15.png)
+
+## The Techdraw workbench 'Insert Dimension' tool
+
+![alt text](image-16.png)
+
+It seems inserting a dimension is a sthree step process?
+
+1. Select the edge for which I want to insert a dimension on the drawing.
+2. Click the 'Insert Dimension' tool
+
+3. Click where the dimension annotation should be placed.
+
+## Beware that the default size of annotations on 'Techdraw workbench' does NOT adjust to the scale of existing objects
+
+So in this video the presenter shows how we scale down the house 1:50 (1:70 in my case) to have the site plan fit on the page. BUT - When I now insert a dimension the label is **huge**!
+
+<figure>
+  <img src="image-17.png" alt="alt text">
+  <figcaption><em>HUGE annotation text size on scaled-down drawing</em></figcaption>
+</figure>
+
+NOTE: The presenter does not have this problem in the video!
+
+It seems the default size of labels on Techdraw drawings are defined in Freecad Preferences then 'Techdraw'?
+
+![alt text](image-18.png)
+
+And **the font** is defined in 'General' and 'Label Font*'?
+
+![alt text](image-19.png)
+
+Note: I changed to 'Arial' as I like this better than the default 'Academy Engraved LET'.
+
+![alt text](image-20.png)
+
+NOTE: The 'Label Size' does NOT seems to affect the size of the text for Dimensions?
+
+Instead it seems the text size of dimensions are defined in 'Dimensions' and 'Font Size'?
+
+![alt text](image-21.png)
+
+![alt text](image-22.png)
+
+But I find this quite opaque? What does a 'Font Size' of '5 mm' actually mean? In what world does 5 mm make sense? Maybe the 5 mm is the actual size on the A3 page?
+
+## It seems the 'Gap Factor' defines a distance between a measurement 'arrow' end marker and the object?
+
+The presenter describes how in architectual drawings one usually prefer NOT to draw the reference line for annotaed distances all the way to the object.
+
+So if we have a measurement annotaed like this.
+
+![alt text](image-23.png)
+
+Then we can change the 'Gap Factor ISO' of a selected measurement in the drawing to, as the presenter in the video sugests, 30.
+
+![alt text](image-24.png)
+
+Now Freecad whows the measurement annotation with 'a gap' to the referenced object.
+
+![alt text](image-25.png)
+
+Note: I tried to find a definition of the 'Gap Factor ISO' but failed. In my drawing a Gap factor over 30 had no effect. That is, at Gat factor 30 the gap is as large as it gets?
+
+## Beware that you may need to do '
+
+The presenter in the video showed how, if we change the default settings for 'Gap Factor ISO' and also the 'Arrow Style' in Preferences and 'Dimensions', then we may need to also click on 'Redraw Page' gto have the changes taake effect.
+
+So say we change the default preferences for 'Gap Factor' and 'Arrow Style' in Freecad preferences.
+
+![alt text](image-26.png)
+
+Then, in the 'Techdraw workbensh' we need to click 'Redraw Page'.
+
+![alt text](image-27.png)
+
+And now our arows styles are with tick ok.
+
+![alt text](image-28.png)
+
+## Beware that you must select a view before using the 'Add Leaderline to View' Techdraw workbench tool
+
+If we try to click this tool without having a 'view' on drawing selected.
+
+![alt text](image-29.png)
+
+Then we get an error.
+
+![alt text](image-30.png)
+
+So you must first select a 'view' in the 3D model tree.
+
+![alt text](image-31.png)
+
+It seems we need to interact with the Dialog to define a leaderline to add?
+
+![alt text](image-32.png)
+
+The process seems to be:
+
+1. Click on 'Pick Ponts'
+2. Click to define the leaderline points locations.
+3. Click on 'Save Points'
+
+![alt text](image-33.png)
+
+## Beware that the leaderline is not shown as defined in the 'create dialog' until we click ok
+
+So while I define the leaderline it seems the line is shown as 'dotted' and not with the attributes defined.
+
+![alt text](image-34.png)
+
+Then when we click ok we can see how the leaderline actually looks!
+
+![alt text](image-35.png)
+
+## Beware that we add actual text unattached to any leaderline or other 'things' on the drawing
+
+The presenter in the video described how we use the 'Insert Annotation' in the techdraw workbench.
+
+![alt text](image-36.png)
+
+The presenter also described how the annotation object is tottaly 'free' and unrelated to any leaderline (or eny other objects on the drawing?).
+
+## Beware that the new Annotation is placed in the center of the drawing and we need to manually move it!
+
+Also, to actually be able to move the created annotation we mus ensure we 'Toggle Frames' so they are on (otherwise we cant grip them)!
+
+![alt text](image-37.png)
