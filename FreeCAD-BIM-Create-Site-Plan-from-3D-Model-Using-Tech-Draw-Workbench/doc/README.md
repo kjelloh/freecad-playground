@@ -345,3 +345,105 @@ And I could manually enter this value into the annotation.
 ![alt text](image-45.png)
 
 NOTE: This means in Freecad we can NOT define these kind of data to be automatically updated if we make changes to the model?
+
+## Beware that Freecad does NOT switch to the 'Techdraw' workbench when I select a 'Page'!
+
+I could not find the 'Hatch a Face using Image File' tool even though I was editing my Page. 
+
+![alt text](image-46.png)
+
+It turned out that Freecad was in the 'Part Design' workbench! When I switched to the 'Techdraw' workbench the 'Hatch a Face using Image File' tool was available again.
+
+*NOTE: The more I use Freecad the more it becomes appearent that the user interface is a bit of a house-of-cards?*
+
+Anyhow...
+
+## Beware that the 'Create Face Hatch' tool uses svg-files chosen by the user (not a wisywig user interface)
+
+It would of cource be nice if Freecad offered a 'what you see is what you get'. But instead Freecad offers me as a user to select a built-in svg-file.
+
+![alt text](image-47.png)
+
+1. Choose a file
+2. Click on another input field in the dialog to update the view
+3. Adjust the 'SVG Pattern Scale' and click on another input field to upodate the view.
+
+In this way I could kind of iterate settings until I had the look-and-feel I wanted.
+
+![alt text](image-48.png)
+
+## Beware that you need to switch to the BIM workbench to be able to move the inserted north symbol!
+
+I was able to open the Freecad-file with the North symbol in it. And copy-and-paste also worked.
+
+But - Then I could not move it! I was confused. But it turned out I was in the wrong workbench (I was still in 'Techdraw' workbench).
+
+I find it confusing how I should understand the concept of a 'workspace'? In this case I pasted an object from the 3D model of another freecad file (in this case the North symbol).
+
+1. I had to select the tab with my freecad file (my 3D model) to paste the symbol.
+2. I pasted with control-V into my 3D model.
+3. I could see the symbol at origo of my 3D model view
+
+![alt text](image-49.png)
+
+But now I was unable to move it! I could to grab and move it. And there was no 'Move' tool in any of the tool bars.
+
+It turned out I was still in the 'Techdraw' workbench! 
+
+![alt text](image-50.png)
+
+I had to manually switch to the 'BIM' workbench!
+
+![alt text](image-51.png)
+
+## It seems the 'Rotate' tool allows a first Enter to accept a base angle but the second Enter closes the Rotate dialog?
+
+At first I did not understand how the presenter in the video could enter the base angle and then get the dialog to ask for the rotation. It turns out that when I start the tool it allows the user to press Enter to define the base angle.
+
+![alt text](image-52.png)
+
+I can now safelly enter 0 and press Enter without the Dialog closing down.
+
+![alt text](image-53.png)
+
+Note: This is confusing! All dialog I have used so far has closed on Enter! I have made this mistake so many times! But so I have to remember that the 'Rotate' dialog behaves differently.
+
+## Beware - Don't forget to select the Page and switch to the 'Techdraw' workbench to find the 'Insert View' tool!
+
+Again, to have the north symbol appear on the Page we need to 'view it'. That is, we need to 'create' a 'view' and place it on the 'page'.
+
+But to do this we need to:
+
+1. Select the north symbol in the 3D view.
+2. Switch to the Page tab for our Techdraw page 'thing' (object?)
+3. Switch to the 'Techdraw' workbench!
+
+Now we can click the 'Insert View' tool.
+
+![alt text](image-54.png)
+
+And then use the 'Insert View' dialog as before.
+
+## Beware - to be able to move the north symbol view you need to turn on 'Frames'!
+
+Before I was actually able to move annotations without 'Frame' being enabled. But to move the north symbol view I had to 'Toggle Frames' on!
+
+## It seems the view of the north symbol did NOT include the black filling of the left face?
+
+In the 3D view (the main freecad file) the inserted north symbol has one face shadowed in light gray.
+
+![alt text](image-55.png)
+
+But the view we created of it on the page does NOT have any face shaded?
+
+![alt text](image-56.png)
+
+The presenter does not explain why that is? He just insert a 'solid hash'.
+
+I find this confusing? I would like a 'view' to use the stuff from the viewed object I'd like to include. I do NOT like to add-on my own edits to the view. This seems 'messy'?
+
+Anyhow...
+
+My page now looks like this.
+
+![alt text](image-57.png)
