@@ -290,6 +290,58 @@ The presenter also described how the annotation object is tottaly 'free' and unr
 
 ## Beware that the new Annotation is placed in the center of the drawing and we need to manually move it!
 
-Also, to actually be able to move the created annotation we mus ensure we 'Toggle Frames' so they are on (otherwise we cant grip them)!
+At this stage I thought I had to enable 'Frames' (right click and select 'Toggle Frames' until freams ar enabled). 
 
 ![alt text](image-37.png)
+
+But later I was able to move the annotation even if frames was not enabled.
+
+## Beware that Freecad will copy-and-paste an 'Annotation' outside the page!
+
+It seems that if I copy-and-paste (control+C and control+V) then Freecad will place the annoptation copy outside the page! 
+
+![alt text](image-38.png)
+
+ANd to be able to see it and move it to place we need to manually move it inside the page again.
+
+## Beware the trick to insert superscipt '2' into Freecad annotation on macOS
+
+On my macOS I can open the 'Character Viewer' with control + command + space. But this does NOT work in the text edit dialog of the Freecad annotation! Instead I opened a macOS document like Pages and insrted the superscript '2' there. Then I could copy-and-paste it to Freecad annotation text.
+
+![alt text](image-39.png)
+
+1. Open a Pages document
+2. Press control + command + space
+3. Enter 'superscript' in the search field.
+4. Doubble-click on the superscipt '2' in the search result
+
+![alt text](image-40.png)
+
+I now have the superscipt '2' in my Pages document
+
+5. Copy-and-paste the subscript '2' from my Pages document to the Freecad annotation text
+
+![alt text](image-41.png)
+
+Annoying! But at least it works...
+
+![alt text](image-42.png)
+
+## Beware that the area measure tool only works on 3D model objects (not on 2D 'Page' drawing counterparts)!
+
+The presenter in the video described how we must go to the 3D model and measure the Garage footprint area on the Garage slab object (called 'Floor Slab' in my model).
+
+1. Select the 'Floor slab' object in the 3D model
+2. Click the 'Measure' tool
+
+![alt text](image-44.png)
+
+Freecad now shows the area of the slab.
+
+![alt text](image-43.png)
+
+And I could manually enter this value into the annotation.
+
+![alt text](image-45.png)
+
+NOTE: This means in Freecad we can NOT define these kind of data to be automatically updated if we make changes to the model?
