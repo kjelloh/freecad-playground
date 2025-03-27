@@ -9,3 +9,5 @@
 * [FreeCAD BIM Tutorial for Beginners; Create a Garage Building](FreeCAD_BIM_Tutorial_for_Beginners__Create_a_Garage_Building/doc/README.md)
 
 * [FreeCAD BIM: Create Site Plan from 3D Model Using Tech Draw Workbench](FreeCAD-BIM-Create-Site-Plan-from-3D-Model-Using-Tech-Draw-Workbench/doc/README.md)
+
+* [Freecad 'Poke Around' to figure stuff out](FreeCAD_Poke_to_figure_out/doc/README.md)

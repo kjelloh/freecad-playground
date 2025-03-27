@@ -4,6 +4,8 @@ See [https://youtu.be/WZHyUBfdgJA?list=PL3wRqQUPtE16yw_c1TnRYJmz37y2ZRTLm](https
 
 NOTE: My model turned out with the wrong external wall size (see below). Pleas be beware of this if you are to open my model and inspect it.
 
+Also see my second take [TAKE_2.md](TAKE_2.md)
+
 But I got through and had me a model of the Garage as the presenter showed in the video.
 
 ![alt text](image-58.png)
@@ -35,7 +37,7 @@ If I 'right align' my created wall it seems it is placed 'inside' the rectangle?
 ![alt text](image-4.png)
 
 
-NOTE: Later (See below) it turns out my wall was aligned 'left' for some reason. This is WRONG but at that stage I chose not to go back an fix everytging that is in the wrong place if I fix my external wall.
+NOTE: Later (See below) it turns out my wall was aligned 'left' for some reason. This is WRONG but at that stage I chose not to go back an fix everything that is in the wrong place if I fix my external wall.
 
 ## The Line colour of the rectangle is shown ONLY when not selected!
 
