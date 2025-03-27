@@ -447,3 +447,77 @@ Anyhow...
 My page now looks like this.
 
 ![alt text](image-57.png)
+
+## It seems Page 'Export PDF' and Print to pdf works fine?
+
+The presenter showed how to 'Export to pdf' which I tried with success.
+
+I could right click the page and select 'Export PDF' ok.
+
+![alt text](image-58.png)
+
+I also tried to print to pdf ok.
+
+![alt text](image-59.png)
+
+![alt text](image-60.png)
+
+## Beware that meny 'File' and 'Export' to PDF requires a selected Page and renaming exported file to '.pdf'!
+
+It seems the File menu 'Export' is a swiss army knife that requires some cuddling to have it create a pdf?
+
+1. Select the 'Page' in the 3D model tree view.
+2. Click File meny and then 'Export'
+3. Select the drop down for file type and select '*svg *.dfx *.pdf'
+
+![alt text](image-62.png)
+
+4. Then rename the file name to have the '.pdf' extension!
+
+![alt text](image-61.png)
+
+5. Click 'Save'
+
+For me this worked and I got a pdf-file with the expected content.
+
+*But - This is quite an elaborate operation to get right?*
+
+## Beware that Freecad assigns a default 'face colour' that are light grey!
+
+The presenter explains why the faces of the site plan in the pdf are shaded and not white.
+
+It seems I need to select each 'View' object on the Page and go to the property pane 'view' tab and the 'Face Color' property value.
+
+![alt text](image-63.png)
+
+I can now edit this 'Face color' to be full white.
+
+![alt text](image-64.png)
+
+Note: For me there was NO shading of objects on the page?!
+
+AHA - The reason I had no problem is that for me Freecad had assign the 'Face Transparency' to 100. This means the 'Face Color' has NOT EFFECT! But the presenter in the video had a transparency setting of 0. So for him the Face Color will show up in the PDF...
+
+AHA again! For me Freecad had checked the Freecad Preferences for 'TechDraw' and 'Colors' property 'Transparent Faces'.
+
+![alt text](image-65.png)
+
+It seems the presenter sugests I should NOT check the 'Transparent Faces' Freecad Techdraw preference setting?
+
+Note: The box to the right of the 'Transparent Faces' preference checkbox is the default Face Color!
+
+![alt text](image-66.png)
+
+I changed this Color to pure white (as the presenter sugested).
+
+## It seems a 'Techdraw' view object keeps updated to the object it is a view of (dimensions will change with edits)
+
+The presenter showed how changing the dimensions of the site perimeter actually did show also on the Page.
+
+The view seems to pick up the change and update the view onto the page?
+
+![alt text](image-67.png)
+
+Note: For some reason my house model did not contain any 'Plot' drawing (wires)? So I edited the 'Grass' sketch instead and this had a simmilar effect.
+
+Done!
