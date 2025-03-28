@@ -98,25 +98,50 @@ The external geometry mode is indicate with blue geometry icons.
 
 ## Can I snap windows to a sketch on the wall?
 
-NO! It seems when I snap a window to the sketch, it breaks both the internal wall sketch AND the wall sketch?!
+YES! But the sketch must NOT be referencing the wall through 'external geometry'!
 
-Maybe the 'create window' tool renames the topology of the wall? ANd if so, then this breaks the external geometry projection of both the internal wall and external wall face sketches? As they both project the external wall onto them and uses these references for drawings?!
-
-**Beware** - The 'Sketch' tool in the BIM workbench seems to snap to the wroking plane? I was unable to create a sketch on the wall surface (it was placed on the floor by itself and without asking)?
-
-If I switched to the 'sketcher' workbench I could select a wall face and create a sketch onto that face seemingly ok.
-
-I projeted the wall sides onto the sketch as construction lines.
-
-Note: It seems a wall does not have a topå line (edge)? At least, I could only insert (create) external geometry from the side lines and bottom line of the wall?
-
-Anyhow, I create this sketch.
+I created this sketch. Where the perimeter is 'external geometry' from the existing wall.
 
 ![alt text](image-9.png)
 
+Now I was able to place a window that snapped to the rectangles on the sketch that I hade drawn where the windows should go.
 
+![alt text](image-14.png)
 
+BUT - When the window snapped into place this sketch (and the sketch I had defined for the internal walls) **broke**!
 
+Maybe the 'create window' tool renames the topology of the wall? And if so, then this breaks the external geometry projection of both the internal wall and external wall face sketches? As they both project the external wall onto them and uses these references for drawings?!
 
+**Beware** - The 'Sketch' tool in the BIM workbench seems to snap to the wroking plane? I was unable to create a sketch on the wall surface (it was placed on the floor by itself and without asking)? 
 
+But - if I switched to the 'sketcher' workbench I could select a wall face and create a sketch onto that face seemingly ok.
 
+Conclusion: It seems I may be able to snap window in place as defined by a sketch as long as the sktech does not break when the wall is mutated by the inserted window?
+
+## Can I define named parameters and have my sketch use such parameters?
+
+YES! I can use a 'spreadsheet' and give cells an Alias. Then I can use this alias as an 'expression' for other freecad properties.
+
+1. I Create a 'Spreadsheet' in the 'Spreadsheet' workbench
+
+![alt text](image-11.png)
+
+2. I assigned an Alias to cell A1
+
+![alt text](image-12.png)
+
+3. Now I could use this value in my Wall 'Width' property
+
+![alt text](image-13.png)
+
+Note: I entered this expression by starting the input with '='. This triggered Freecad to open an 'Expression editor'!
+
+![alt text](image-10.png)
+
+It seems I should also be able to create a sketch. And then on that sketch draw 'stuff' and define contraints.
+
+Then I should be able to use (a python?) expression to refer a constraint value in this specific sketch as a value expression for other properties in Freecad?
+
+```pyhon 
+Sketch.<SketchName>.Constraints.<ConstraintName> 
+```

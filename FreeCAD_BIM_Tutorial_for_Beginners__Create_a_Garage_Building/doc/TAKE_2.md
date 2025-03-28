@@ -23,3 +23,30 @@ I had already forgot the 'Snap grid' setting and icon! Without this setting it i
 
 ![alt text](image-60.png)
 
+## It seems I can use a spreadsheet with alias to cells to control parameters of my house model?
+
+1. I created a spreadsheet in the 'Spreadsheet' workbench.
+
+![alt text](image-61.png)
+
+2. I defined a set of parameters I needed for the external and internal walls.
+
+3. I assigned an Alias to each value (I used the same alias as the text I used in column A)
+
+NOTE: Freecad can NOT read 'names' of cells from the spreadsheet itself!
+
+4. I could now degine a sketch with contstraints that uses the cell values in my spread sheet.
+
+![alt text](image-62.png)
+
+E.g., the Y-axis dimension of the exterior wall was defiend as the value of the cell with alias 'house_Y'.
+
+![alt text](image-63.png)
+
+Note: I initiated the value input with '=' and Freecad opened the expression editor automatically!
+
+This is kind of nice!
+
+Especially as the sketch DOES update when I changed the value in the spread sheet!
+
+...
