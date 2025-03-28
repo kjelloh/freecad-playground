@@ -60,3 +60,63 @@ This is a rectangle I created with the preference 'Line Width' of 5 pixels.
 
 ![alt text](image-64.png)
 
+## Can I create both Walls and a slab from the same sketch?
+
+Yes!
+
+![alt text](image-4.png)
+
+It seems the 'sketch' referenced (shown inside) the Wall tree node is **the same one** as the one referebnced (shown inside) the slab?
+
+At least, if I make the sketch visibe, then the sketch inside the wall and the sketch inside the alb are both made visible.
+
+Also, when I rename the sketch inside the slab to 'sketch - perimeter' then the label of 'both' sketches changes together.
+
+![alt text](image-5.png)
+
+I conclude the object shown inside the wall and slab is a **reference** to the same sketch instance?!
+
+## Can we snap internal walls to a floor sketch?
+
+YES!
+
+I created a sketch 'Sketch - internal walls' and projected the external walls onto it (using the 'Create external geometry' tool to get the inside reference of these walls).
+
+I could now place two lines to use to create the internal walls. 
+
+![alt text](image-6.png)
+
+And using the 'Wall' tool on this sketch got me some innetr wall ok.
+
+NOTE: BE sure to 'Create external geometry' in the 'Constrction geometry' mode (to make the external wall reference lines 'virtual' = not used by the create wall tool later on).
+
+![alt text](image-7.png)
+
+The external geometry mode is indicate with blue geometry icons.
+
+![alt text](image-8.png)
+
+## Can I snap windows to a sketch on the wall?
+
+NO! It seems when I snap a window to the sketch, it breaks both the internal wall sketch AND the wall sketch?!
+
+Maybe the 'create window' tool renames the topology of the wall? ANd if so, then this breaks the external geometry projection of both the internal wall and external wall face sketches? As they both project the external wall onto them and uses these references for drawings?!
+
+**Beware** - The 'Sketch' tool in the BIM workbench seems to snap to the wroking plane? I was unable to create a sketch on the wall surface (it was placed on the floor by itself and without asking)?
+
+If I switched to the 'sketcher' workbench I could select a wall face and create a sketch onto that face seemingly ok.
+
+I projeted the wall sides onto the sketch as construction lines.
+
+Note: It seems a wall does not have a topå line (edge)? At least, I could only insert (create) external geometry from the side lines and bottom line of the wall?
+
+Anyhow, I create this sketch.
+
+![alt text](image-9.png)
+
+
+
+
+
+
+

@@ -12,11 +12,12 @@ The plan view at video 7:55 shows also the wall thickness 400 mm.
 
 Some key properties are:
 
-* Width: 8400 mm, depth: 6200
+* Width **X: 8400 mm**, Depth **Y: 6200 mm**
 * The external wall is **inside** the 8400x6200 house wall perimeter.
-* The external wall thickness is 400 mm
+* The external wall thickness is **400 mm**
+* The slab thickness is **250 mm**
 
-## Beware 'Snap to the Grid' is its own setting (See 'hash' icon)
+## Beware 'Snap to the Grid' is its own setting (See icon that looks like a 'hash', kind-of)
 
 I had already forgot the 'Snap grid' setting and icon! Without this setting it is hard to draw the rectangle attached at origo.
 
