@@ -138,10 +138,40 @@ Note: I entered this expression by starting the input with '='. This triggered F
 
 ![alt text](image-10.png)
 
-It seems I should also be able to create a sketch. And then on that sketch draw 'stuff' and define contraints.
+## Will a sketch on a wall face break when I place windows on the wall
 
-Then I should be able to use (a python?) expression to refer a constraint value in this specific sketch as a value expression for other properties in Freecad?
+NO! The sketch stays intact and ok!
 
-```pyhon 
-Sketch.<SketchName>.Constraints.<ConstraintName> 
-```
+I made this sketch of the back wall of a house model in 'take_2' of the gaerage building tutorial (See TAKE_2.md).
+
+![alt text](image-15.png)
+
+This sketch depends on values in a spreadsheet. And it does NOT depend on any projected dimensions from the wall itself.
+
+Question is, can I use this sketch to place windows on the wall without this sketch breaking?
+
+## Can I place windows on a wall by snapping to a sketch on the wall?
+
+YES! As long as the sketch does not project any dimensions from the wall.
+
+![alt text](image-16.png)
+
+## Will windows placed by snapping to a sketch on the wall move with changes to the sketch?
+
+NO! I changed the distance between two windows I placed with the sketch above. BUT - the wondow I placed by snapping to the sketch did NOT move!
+
+**Conclusion: Window placement by snapping to a sketch does NOT introduce and placement constraints.**
+
+## Will windows placed on a wall move if the wall placement changes?
+
+NO! The windows seems to be placed at absolute positions in space?
+
+Here is what happens if I move the right side wall with a window on it. It will be left hanging in thin air!
+
+![alt text](image-17.png)
+
+## Can I make the axis placement of a door be an expression and even a value from my spreadsheet?
+
+NO! The placement of a door (and this implicitly any BIM object?) must be a constant value!
+
+You know, these BIM objects seems getting less and less usable? I suppose I have to just accept that BIM dsign is a one-shot operation? Or at least, any changes I must do them manually?!

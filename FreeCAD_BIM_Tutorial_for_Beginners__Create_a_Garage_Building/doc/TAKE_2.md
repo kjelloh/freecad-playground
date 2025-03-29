@@ -49,4 +49,44 @@ This is kind of nice!
 
 Especially as the sketch DOES update when I changed the value in the spread sheet!
 
-...
+## Beware - even sketches fails to correctly adapt constraints to parameter changes
+
+I tried to define this sketch based on the house X and Y sizes in my spreadsheet.
+
+![alt text](image-64.png)
+
+The wall thickness constraints are also from parameter in the spreadsheet.
+
+If I increase the house X axis size from 6200 mm to 7000 mm I get this sketch.
+
+![alt text](image-65.png)
+
+Obviously there is something stramnge going on here?!
+
+* The perimeter is drawn with the new size. But none of the constraints is shown as updated?
+
+But my house model seems to be updated OK?
+
+![alt text](image-66.png)
+
+Note: Both extrnal and internal walls are correctly adapted to the new 7000 mm side?!
+
+If I open the sketch again it now looks fine?
+
+![alt text](image-67.png)
+
+Hm...Changing the side down to 6000 mm now also seems to work now?
+
+![alt text](image-68.png)
+
+**Strange?!**
+
+Still, the behaviour by Freecad in this regard does not feel to earn my trust to be used for parametric based BIM designs?
+
+## The final take_2 house model (without gass and driveway)
+
+![alt text](image-69.png)
+
+
+
+
