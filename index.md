@@ -1,5 +1,7 @@
 # My notes for the different things I try out with Freecad in this Freecad Playground repo :)
 
+* [README](README.md)
+
 * [Main README](main/README.md)
 
 * [FreeCAD Help - BIM Tutorial](Help-BIM-Tutorial/README.md)
