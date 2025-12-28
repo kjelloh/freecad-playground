@@ -1,8 +1,74 @@
 # My poking into Freecad to figure stuff out
 
-I want to understand how Freecad treat thuings under the hood so that I can adjust my expectations and model of what Freecad does. This should make me more productive and less surprised when using Freecad I hope.
+I want to understand how Freecad treat things under the hood so that I can adjust my expectations and model of what Freecad does. This should make me more productive and less surprised when using Freecad I hope.
 
 See the Freecad file 'FreeCAD_Poke_to_figure_out/FreeCAD_Poke_to_figure_out.FCStd'
+
+## 'Booting' my understanding from simple 'beam' object
+
+I came up with the idea to create a simple object like a 'beam' and ask the following.
+
+1. How many ways are there to model a 'beam'?
+  * I imagine I can create a beam in two wokrbenches?
+    (The 'Part Design' and/or the 'Part' workbench)
+
+### What is a 'Model' and what do I get when I do <File>/<New>?
+
+Am I stupid or is FreeCad user interface just vauge? I wanted to try ways to create a beam and opened the file 'FreeCAD_Poke_to_figure_out.FCStd'. I am confused about the semantics of this file? Is this something like a 'project file' in that it aggregates 'stuff' beloning to the same project? I know it is something something zipped?
+
+I tried <File>/<New> and got a new top node in the model tree.
+
+![alt text](image-18.png)
+
+The FreeCAD documentation is vauge about the FCStd-file [File Format FCStd](https://wiki.freecad.org/File_Format_FCStd):
+
+```text
+The FreeCAD Standard file format (.FCStd) is FreeCAD's main file format. It is a compound format, supports compression and embedding of different kinds of data.
+```
+
+Huh?
+
+So what I need to know is the 'semantics' for this file. So I know what to put in it? When to create a new one? What consequencies two or more files have on my work flow? Can I reference data in one FCStd-file from 'stuff' in another FCStd-file? And so on?
+
+I need to come back to this later. For now I create my beam under the top node I got in my 'model' when doing <File>/<New>.
+
+- When do I need to save?
+- Can I save with my top node named 'Unnamed1'?
+- What happens if I quit without saving after <File>/<New>?
+
+Well, I could <FreeCAD-...>/<Quit freecad> without any pop-up or errors.
+
+And When I opened my FCStd-file again my new model top node 'Unnamed1' was GONE!
+
+AHA! The top-nodes in the model-tree ARE separate FCStd-files!
+
+I named my 'new' thing 'beam_bootstrap'.
+
+![alt text](image-19.png)
+
+Then <File>/<Save> does:
+
+![alt text](image-20.png)
+
+*sigh* (VAUGE...)
+
+But ok. I can adapt!
+
+I have to remember to later try to referense 'stuff' in another FCStd-file to see if I can?
+
+- Are there other types of files to save other 'things'?
+
+### Why can I create a 'Part' under (inside) a 'Part Design' thing?
+
+I used the 'Part Design' workbench to sktech and extrude a 'thing' I labelled 'part_design_beam'.
+
+I then switched to the 'Part' workbench and created a 'cube' (that I named 'part_cube_beam') with the same dimesnions as my 'part_design_beam'.
+
+I now have 'part_cube_beam' as a member node under the 'part_design_beam'?!
+
+![alt text](image-21.png)
+
+What does this even mean?
 
 ## In BIM workbench, can I create a 'Wall' from a sketch?
 
@@ -22,7 +88,7 @@ Conclusion: This seems like a better way to create walls in BIM than to use the 
 
 ![alt text](image-1.png)
 
-## The BIM workbench 'Sketch' tool is the same as '
+## The BIM workbench 'Sketch' tool is the same as 'Create Sketch' in 'Sketcher' workbench
 
 The BIM workbench 'Sketch' tool.
 
