@@ -70,6 +70,113 @@ I now have 'part_cube_beam' as a member node under the 'part_design_beam'?!
 
 What does this even mean?
 
+### Why can I create a 'Part workbench cube' beam paralell with 'Part design' beam?
+
+If I first use Part workbench to create a cube-as-beam and then the Part design workbench to extrude a sketch into a beam - then I get the part-beam and part-design-beam as separate nodes. What does this mean? 
+
+![alt text](image-22.png)
+
+### FEM analysis on single beam
+
+I used youtube video [FreeCAD FEM Workbench | Basics In 15 Minutes | Beginners Tutorial](https://youtu.be/YJd78HWdK1M) to just get directions on what vuttons to press and in what order to apply a FEM analysis on one of my beams.
+
+I was able to get an analysis and view of the beam displacement.
+
+![alt text](image-23.png)
+
+So what did NOT behave as I expected it to?
+
+1. We need a 'body' open in the editor.
+   (I failed to import, link or do anything of the sort to bring a 'thing' in for analysis)
+2. We need (?) to create an 'analysis' in the same document as the body?
+   (This is what the youtube video show us to do)
+
+We need to create the following nodes in the nodel tree.
+
+![alt text](image-24.png)
+
+* The top 'Analysis' container node (FEM workbench)
+* The ConstraintFixed sub-node (FEM Workbench define what face is fixed)
+
+![alt text](image-25.png)
+
+  - Quirk: I need to have a 'body' open in the view to have something to select off on.
+  - Quirk: I need to click 'add' and then a face (not the other way around)
+  - Quirk: When I select the end-face of my beam I get a 'box' added!
+           (Seems to be a view of something 'fixed'?)
+
+ ![alt text](image-26.png) 
+
+* The ConstraintForce sub-node (FEM Workbench define what and where forces are applied)
+
+![alt text](image-27.png)
+
+  - Quirk: I get several grouped forced applied in the view
+           (Why five and why there?)
+  - Quirk: The 'force' is 500 without dimension (It is not Newton, more below)?
+  - Quirk: The forces are by defult up (I needed to click 'reverse')
+  - Quirk: I edietd force to 1000 0000 but the main dialog still showed 500.
+           (But my 1000 000 value was used ok - confusingly...)
+
+![alt text](image-28.png)
+
+  - Quirk: I failed to use the opposite face as 'direction' to reverse the direction
+
+  - Quirk: I tried the 'Preassure load' instead but it stills looks like five point forces?
+           (Although the arrows are now blue to konfuse me even further...)
+
+![alt text](image-29.png)  
+
+![alt text](image-30.png)
+
+  - Quirk: The 'pressure' is defaulted to 0,1 kg / (mm*s^2)
+           (I suppose it is from F = m*a and P = F/A?)
+           (F dimension can be expressed as kg*m/s^2)
+           (Thus P dimenseion becomes kg*m/(m^2 * s^2) which is kg / (m*s^2))
+           (But why use this dimension? ANd why mm to get everyting a factor 1000 larger?)
+
+* The MaterialSolid (FEM workbench define the material of our 'body' go analyse)
+
+![alt text](image-31.png)
+
+  - Quirk: The created 'material' node does not show what mayterial it is set to
+
+![alt text](image-32.png)  
+
+* The SolverCcxTools node (FEM workbench define what processor to implement FEM)
+
+![alt text](image-33.png)
+
+* The FEMMeshNetgen node (FEM workbench FEM triangulation of the body to analyse)
+
+![alt text](image-34.png)
+
+  - Quirk: I needed to select and make visible the body I wanted to analyse
+           (Again, no concept of 'importing' into the analysis)
+  - Quirk: The created mesh refers to my selected 'thing' as the 'Shape'
+
+ ![alt text](image-35.png) 
+
+ * The CCX_Results and ccx_dat_file (SolverCcxTools node 'write .inp-file' and then 'Run CalculiX)
+
+ ![alt text](image-36.png)
+
+Finally, to actually see the result I need to open the CCX_Results node.
+
+- Quirk: The 'Displacement' section default to a max factor 100 instead of 1
+         (Maybe good for seeing very small displacements by factoring them up?)
+         (For my 6 cm over 250 cm it was just confusing with the factor 100!)
+
+So far I at least got the pipeline to work. But I still have things to figure out.
+
+- How do I apply a FEM analysis to building elements of my house?
+- Do I need to transform my assembled beams into solids first?
+- And if so, how do I model fasteners (joint strength and behaviour)?
+- I failed to apply FEM so my experiment 'assembly'.
+  (An assembly can't be used as something I can turn into a FEM mesh for analysis?)
+
+![alt text](image-37.png)
+
 ## In BIM workbench, can I create a 'Wall' from a sketch?
 
 YES!
