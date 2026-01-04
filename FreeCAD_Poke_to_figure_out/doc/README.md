@@ -231,6 +231,29 @@ As of now just my simpel two-beams-as-a-cross assembly with no material applied 
 
 This is EXCITING! If I can find a usable and simple way to catch my house location as an HDR with correct scale - then I actually CAN model my house in FreeCAD and then render it 'on location' with the HDR!
 
+### How can I define materials for my 'things' for better rendering in Blender?
+
+I youtube video [FreeCAD 1.0 x Blender : Render and Animate your 3D CAD files - Complete Beginner Tutorial](https://youtu.be/6amHcXHxCa8) at around 10:25 the presenter shows how to define materials in Blender.
+
+- Click a 'thing' to select it
+- Click the 'Materials' tab to the right (properties editor pane)
+
+WAIT! Blender materials is COMPLICATED!!!
+
+- It seems we need to set up some form of intricate 'node based' processing pipe line?
+
+![alt text](image-41.png)
+
+By default we get a 'Principled BSDF' (What is this?) connected to a 'Material Output'?
+
+I think I pause here for now. I have a pipe line from FreeCAD assembly to Blender rendering inside an HDR. That is sufficient for now I think.
+
+### How can I render wooden beams and OSB in Blender?
+
+I found a free 'wood' material image [Wood jpg](https://architextures.org/textures/1117) and OSB [OSB](https://architextures.org/textures/2178).
+
+But I failed to understand how tp make Blender use them to render my wooden beams or future OSB framing assemblies.
+
 ## In BIM workbench, can I create a 'Wall' from a sketch?
 
 YES!
