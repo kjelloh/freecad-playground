@@ -213,6 +213,24 @@ So now we have a way to operate on FreeCAD assemblies in Blender. Is this suffic
 - Will my house be a set of 'things' I define in FreeCAD assembly workbench?
 - Will FreeCAD Assembly -> GLTF -> Blender be a sufficient pipeline to render my house designs?
 
+### Can I create an 'HDR' of the surroundings where my house will be built?
+
+The youtube video [FreeCAD 1.0 x Blender : Render and Animate your 3D CAD files - Complete Beginner Tutorial](https://youtu.be/6amHcXHxCa8) shows how to use an HDR to get 'good lightning' but also indicates that an 'HDR' provides a surrounding 'world' that Blender will render my house in!
+
+I downloaded the free HDR [HDRIs / Outdoor / Charolettenbrunn Park](https://polyhaven.com/a/charolettenbrunn_park).
+
+- Blender quirk: To render my house I go to the Blender tab 'Shading' (Not 'Render')!
+
+At around 9:50 into the youtube video the presenter shows how to configure Blneder to use an HDR to render my 'thing' in.
+
+I succeeded to use my free downloaded HDR to view my FreeCAD assembly in!
+
+![alt text](image-40.png)
+
+As of now just my simpel two-beams-as-a-cross assembly with no material applied in Blender.
+
+This is EXCITING! If I can find a usable and simple way to catch my house location as an HDR with correct scale - then I actually CAN model my house in FreeCAD and then render it 'on location' with the HDR!
+
 ## In BIM workbench, can I create a 'Wall' from a sketch?
 
 YES!
