@@ -177,6 +177,42 @@ So far I at least got the pipeline to work. But I still have things to figure ou
 
 ![alt text](image-37.png)
 
+### How can I render 'tings' from FreeCad in Blender?
+
+I would like to render my house designs in blender. This seems to be possible. But how can I understand how this works to chose how to do i myself?
+
+I watched [FreeCAD 1.0 x Blender : Render and Animate your 3D CAD files - Complete Beginner Tutorial](https://youtu.be/6amHcXHxCa8).
+
+In the video the presenter exports an assembly! So that is possible.
+
+1. Seelct assembly (all parts becomes selected / blue in the view port)
+2. Do File/Export
+3. The video seems to sugest we shall export in some 'mesh format' (at around 1:20 into the video)
+  Sugested formats in the video are:
+  - OBJ (Remeshed)
+  - PLY
+  - STL
+  - GLTF
+4. Export as GLTF (to try the video shown way)
+  - Quirk: I get two files (a bin-file and the gltf-file)
+           What is the bin-file? 
+5. Open the file gltf-file in blender
+  - Quirk: I can't ask macOS to use Böender to open the file.
+           Blender does start but ignores the file
+
+  - In Blender do File/Import/gltf 2.0
+
+I now got my assembly in Blender view port and model tree.
+
+![alt text](image-38.png)
+
+![alt text](image-39.png)
+
+So now we have a way to operate on FreeCAD assemblies in Blender. Is this sufficient?
+
+- Will my house be a set of 'things' I define in FreeCAD assembly workbench?
+- Will FreeCAD Assembly -> GLTF -> Blender be a sufficient pipeline to render my house designs?
+
 ## In BIM workbench, can I create a 'Wall' from a sketch?
 
 YES!
